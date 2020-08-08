@@ -3,8 +3,8 @@
 # dependencies
 /node_modules
 /web/node_modules
-/.pnp
-.pnp.js
+/web/.pnp
+/web/.pnp.js
 /server/node_modules
 
 # testing
