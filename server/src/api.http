@@ -1,0 +1,9 @@
+POST localhost:3333/classes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Sammy Melo",
+    "avatar": "https://avatars2.githubusercontent.com/u/32578116?s=460&u=a337889d46e79384f14827246396f544f057ab5f&v=4",
+    "whatsapp": "92995223984",
+    "bio": "Developer FullStack intermediary, lovely programmer"
+}
