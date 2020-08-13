@@ -8,6 +8,7 @@ import Select from '../../components/Select';
 
 function TeacherForm() {
 
+    const [ name, setName ] = useState(['']);
     const [ scheduleItems, setScheduleItems ] = useState([
         { week_day:0, from: '', to: ''}
     ]);
@@ -36,7 +37,12 @@ function TeacherForm() {
 
                     <legend> Seus dados </legend>
 
-                    <Input name="name"  label="Nome Completo" />
+                    <Input 
+                        name="name"  
+                        label="Nome Completo" 
+                        value={name}
+                        onChange={ (e) => { setName(e.target.value } }
+                    />
                     <Input name="avatar"  label="Avatar" />
                     <Input name="whatsapp"  label="Whatsapp" />
                     <TextArea name="bio" label="Biografia" />
