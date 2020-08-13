@@ -2,6 +2,8 @@ import React    from 'react';
 import './styles.css';
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
+import Input from '../../components/Input';
+import Select from '../../components/Select';
 
 function TeacherList() {
 
@@ -13,20 +15,31 @@ function TeacherList() {
 
                 <form id="search-teachers">
                     
-                    <div className="input-block">
-                        <label htmlFor="subject">Matéria</label>
-                        <input type="text" id="subject"/>
-                    </div>
+                    <Select 
+                        name="subject"  
+                        label="Matéria" 
+                        options={[
+                            {value: 'Artes', label: 'Artes'},
+                            {value: 'Biologia', label: 'Biologia'},
+                            {value: 'Química', label: 'Química'}
+                        ]}
+                    />
 
-                    <div className="input-block">
-                        <label htmlFor="week_day">Dia da semana</label>
-                        <input type="text" id="week_day"/>
-                    </div>
+                    <Select 
+                        name="week_day"  
+                        label="Dia da semana" 
+                        options={[
+                            {value: '0', label: 'Domingo'},
+                            {value: '1', label: 'Segunda-feira'},
+                            {value: '2', label: 'Terça-feira'},
+                            {value: '3', label: 'Quarta-feira'},
+                            {value: '4', label: 'Quinta-feira'},
+                            {value: '5', label: 'Sexta-feira'},
+                            {value: '6', label: 'Sábado'},
+                        ]}
+                    />
 
-                    <div className="input-block">
-                        <label htmlFor="time">Hora</label>
-                        <input type="text" id="time"/>
-                    </div>
+                    <Input name="time"     label="Hora"  type="time" />
 
                 </form>
 
